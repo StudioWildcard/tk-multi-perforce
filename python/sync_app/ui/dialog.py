@@ -1,7 +1,7 @@
 import logging
 import os
 import sys
-import urllib
+import urllib.request
 import tempfile
 import shutil
 
@@ -324,7 +324,7 @@ class Ui_Dialog(Ui_Generic):
         self.version_history_label.setWordWrap(True)
         self.version_history_label.setObjectName("version_history_label")
         self.version_history_label.setText("<small>Complete Version History</small>")
-        # self.version_history_label.setText(QtGui.QApplication.translate("Dialog", "<small>Complete Version History</small>", None, QtGui.QApplication.UnicodeUTF8))
+        # self.version_history_label.setText(QtGui.QApplication.translate("Dialog", "<small>Complete Version History</small>", None))
         self.details_layout.addWidget(self.version_history_label)
 
         self.history_view = QtGui.QListView()

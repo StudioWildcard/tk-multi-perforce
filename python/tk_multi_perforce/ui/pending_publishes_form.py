@@ -66,14 +66,14 @@ class Ui_PendingPublishesForm(object):
         self.verticalLayout.setStretch(1, 1)
 
         self.retranslateUi(PendingPublishesForm)
-        QtCore.QObject.connect(self.close_btn, QtCore.SIGNAL("clicked()"), PendingPublishesForm.close)
+        self.close_btn.clicked.connect(PendingPublishesForm.close)
         QtCore.QMetaObject.connectSlotsByName(PendingPublishesForm)
 
     def retranslateUi(self, PendingPublishesForm):
-        PendingPublishesForm.setWindowTitle(QtGui.QApplication.translate("PendingPublishesForm", "Form", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("PendingPublishesForm", "The list below shows you all pending publishes in Perforce, allowing you to commit or cancel them as needed.", None, QtGui.QApplication.UnicodeUTF8))
-        self.publish_btn.setText(QtGui.QApplication.translate("PendingPublishesForm", "Publish Current Scene...", None, QtGui.QApplication.UnicodeUTF8))
-        self.close_btn.setText(QtGui.QApplication.translate("PendingPublishesForm", "Close", None, QtGui.QApplication.UnicodeUTF8))
+        PendingPublishesForm.setWindowTitle(QtGui.QApplication.translate("PendingPublishesForm", "Form", None))
+        self.label.setText(QtGui.QApplication.translate("PendingPublishesForm", "The list below shows you all pending publishes in Perforce, allowing you to commit or cancel them as needed.", None))
+        self.publish_btn.setText(QtGui.QApplication.translate("PendingPublishesForm", "Publish Current Scene...", None))
+        self.close_btn.setText(QtGui.QApplication.translate("PendingPublishesForm", "Close", None))
 
 from ..snapshot_list_view import SnapshotListView
 from . import resources_rc

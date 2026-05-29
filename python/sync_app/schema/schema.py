@@ -1,5 +1,3 @@
-from re import template
-
 import sys
 import os
 import logging
